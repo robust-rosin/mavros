@@ -118,6 +118,9 @@ add_library(mavros_extras
 add_dependencies(mavros_extras
   mavros_extras_generate_messages_cpp
 )
+add_dependencies(mavros_extras
+  ${catkin_EXPORTED_TARGETS}
+)
 target_link_libraries(mavros_extras
   ${mavros_LIBRARIES}
   ${catkin_LIBRARIES}

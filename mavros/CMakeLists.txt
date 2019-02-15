@@ -122,7 +122,7 @@ add_library(mavros
   src/lib/rosconsole_bridge.cpp
 )
 add_dependencies(mavros
-  mavros_generate_messages_cpp
+  ${catkin_EXPORTED_TARGETS}
 )
 target_link_libraries(mavros
   ${catkin_LIBRARIES}
